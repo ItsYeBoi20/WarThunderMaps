@@ -56,6 +56,7 @@
                             <div class="color-option" style="background-color: #45b7d1;" data-color="#45b7d1"></div>
                             <div class="color-option" style="background-color: #f9ca24;" data-color="#f9ca24"></div>
                             <div class="color-option" style="background-color: #6c5ce7;" data-color="#6c5ce7"></div>
+                            <div id="deleteLineOption" class="delete-line-option" title="Delete Line">&times;</div>
                         </div>
                     </div>
                     <button id="deleteMapBtn" class="btn danger">Delete Map</button>
@@ -75,11 +76,11 @@
                 <form id="addMapForm">
                     <div class="form-row">
                         <div class="form-col">
-                            <label for="mapName">Map Name:</label>
+                            <label>Map Name:</label>
                             <input type="text" id="mapName" required>
                         </div>
                         <div class="form-col">
-                            <label for="mapImageFile">Map Image:</label>
+                            <label>Map Image:</label>
                             <input type="file" id="mapImageFile" accept="image/*" required>
                         </div>
                     </div>
@@ -99,12 +100,12 @@
             <div class="modal-body">
                 <form id="annotationForm">
                     <div class="form-group">
-                        <label for="annotationLabel">Label:</label>
+                        <label>Label:</label>
                         <input type="text" id="annotationLabel" required>
                     </div>
                     <div class="form-row">
                         <div class="form-col">
-                            <label for="annotationType">Type:</label>
+                            <label>Type:</label>
                             <select id="annotationType">
                                 <option value="camping">Camping Spot</option>
                                 <option value="path">Drive Path</option>
@@ -114,12 +115,12 @@
                             </select>
                         </div>
                         <div class="form-col">
-                            <label for="annotationImageFile">Image (Optional):</label>
+                            <label>Image (Optional):</label>
                             <input type="file" id="annotationImageFile" accept="image/*">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="annotationNotes">Notes (Optional):</label>
+                        <label>Notes (Optional):</label>
                         <textarea id="annotationNotes" rows="4"></textarea>
                     </div>
                     <button type="submit" id="annotationSubmitBtn" class="btn primary">Add Annotation</button>
@@ -140,6 +141,7 @@
                 <div id="annotationDetailNotes"></div>
             </div>
             <div class="modal-footer">
+                <button id="deleteAnnotationModalBtn" class="btn danger">Delete</button>
                 <button id="editAnnotationBtn" class="btn secondary">Edit</button>
             </div>
         </div>

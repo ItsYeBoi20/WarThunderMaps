@@ -206,6 +206,7 @@ h1 {
 
 .map-card-content {
     padding: 1.5rem;
+    text-align: center;
 }
 
 .map-card-title {
@@ -604,6 +605,7 @@ h1 {
         font-size: 1rem;
         font-family: inherit;
         transition: border-color var(--transition-fast);
+        min-height: 45px; /* Added for alignment */
     }
 
         .form-group input:focus,
@@ -733,8 +735,31 @@ h1 {
         padding: 1rem;
     }
 
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
     h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        white-space: nowrap;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    .controls {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    .btn {
+        padding: 0.75rem 1rem;
     }
 
     .maps-grid {
@@ -742,13 +767,27 @@ h1 {
         gap: 1rem;
     }
 
-    .controls {
-        flex-direction: column;
-        align-items: center;
+    .annotation-tooltip {
+        display: none;
     }
 
     .modal-content {
         max-width: 95vw;
         max-height: 95vh;
+        transform: translateZ(0); /* Fix for mobile cursor glitch */
     }
+}
+
+.delete-line-option {
+    width: 38px;
+    height: 38px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: var(--accent-danger);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
 }

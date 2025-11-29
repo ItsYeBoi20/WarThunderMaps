@@ -19,6 +19,18 @@ class WarThunderMaps {
         this.isDrawingLine = false;
         this.lineStartPoint = null;
         this.lineColor = '#ff6b6b';
+        
+        // Touch state
+        this.pinchStartDist = 0;
+        this.pinchStartScale = 1;
+        this.pinchStartMidpoint = { x: 0, y: 0 };
+        this.lastTouchDistance = null;
+
+        // Tap detection
+        this.touchStartTime = 0;
+        this.touchStartPoint = null;
+        this.touchHasMoved = false;
+        this.isGesturing = false;
 
         this.boundMouseMove = this.handleMouseMove.bind(this);
         this.boundMouseUp = this.handleMouseUp.bind(this);
@@ -57,6 +69,7 @@ class WarThunderMaps {
         this.colorPicker = document.getElementById('colorPicker');
         this.colorOptions = document.getElementById('colorOptions');
         this.colorOptionElements = document.querySelectorAll('.color-option');
+        this.deleteLineOption = document.getElementById('deleteLineOption');
         
         // Add/Edit Map Modal
         this.addMapModal = document.getElementById('addMapModal');
@@ -81,6 +94,7 @@ class WarThunderMaps {
         this.annotationDetailImage = document.getElementById('annotationDetailImage');
         this.annotationDetailNotes = document.getElementById('annotationDetailNotes');
         this.editAnnotationBtn = document.getElementById('editAnnotationBtn');
+        this.deleteAnnotationModalBtn = document.getElementById('deleteAnnotationModalBtn');
 
         // Image Preview
         this.imagePreviewModal = document.getElementById('imagePreviewModal');
@@ -104,6 +118,12 @@ class WarThunderMaps {
         this.annotationForm.addEventListener('submit', (e) => this.handleAnnotationFormSubmit(e));
         document.getElementById('closeAnnotationDetailModal').addEventListener('click', () => this.hideAnnotationDetailModal());
         this.editAnnotationBtn.addEventListener('click', () => this.showEditAnnotationModal());
+        this.deleteAnnotationModalBtn.addEventListener('click', () => { 
+            if(this.currentAnnotation && confirm('Delete annotation?')) { 
+                this.deleteAnnotation(this.currentAnnotation.id); 
+                this.hideAnnotationDetailModal(); 
+            } 
+        });
         this.closePreviewModal.addEventListener('click', () => this.hideImagePreviewModal());
         this.imagePreviewModal.addEventListener('click', (e) => { if (e.target === this.imagePreviewModal) this.hideImagePreviewModal(); });
         this.annotationDetailImage.addEventListener('click', () => {
@@ -115,14 +135,24 @@ class WarThunderMaps {
         // Map controls
         this.exportMapBtn.addEventListener('click', () => this.exportCurrentMapAsZip());
         this.deleteMapBtn.addEventListener('click', () => this.deleteCurrentMap());
-        this.drawLineBtn.addEventListener('click', () => this.toggleLineDrawing());
+        this.drawLineBtn.addEventListener('click', (e) => { e.preventDefault(); this.toggleLineDrawing(); });
         this.colorPicker.addEventListener('click', () => this.toggleColorPicker());
         this.colorOptionElements.forEach(option => option.addEventListener('click', (e) => this.selectColor(e.target.dataset.color, e)));
+        this.deleteLineOption.addEventListener('click', (e) => { 
+            if(this.selectedLine && confirm('Delete line?')) { 
+                this.deleteLine(this.selectedLine.id); 
+                this.selectedLine = null; 
+                this.toggleColorPicker(); 
+            } 
+        });
 
         // Map interactions
         this.mapWrapper.addEventListener('wheel', (e) => this.handleZoom(e));
         this.mapWrapper.addEventListener('mousedown', (e) => this.handleMouseDown(e));
         this.mapWrapper.addEventListener('click', (e) => this.handleMapClick(e));
+        this.mapWrapper.addEventListener('touchstart', (e) => this.handleTouchStart(e));
+        this.mapWrapper.addEventListener('touchmove', (e) => this.handleTouchMove(e));
+        this.mapWrapper.addEventListener('touchend', (e) => this.handleTouchEnd(e));
 
         // Global listeners
         const modals = [this.addMapModal, this.annotationModal, this.annotationDetailModal, this.mapModal];
@@ -335,6 +365,167 @@ class WarThunderMaps {
     resetView() { this.scale = 1; this.panPosition = { x: 0, y: 0 }; this.updateMapTransform(); }
     updateMapTransform() { const transform = `translate(${this.panPosition.x}px, ${this.panPosition.y}px) scale(${this.scale})`; [this.mapImage, this.annotationsLayer, this.linesLayer].forEach(el => { if(el) el.style.transform = transform; }); this.annotationsLayer.style.setProperty('--marker-scale', 1 / this.scale); }
     handleKeyDown(e) { if (e.key === 'Escape') { if (this.isDrawingLine) this.exitLineDrawingMode(); else this.closeTopModal(); } }
+
+    getTouchDistance(touch1, touch2) {
+        const dx = touch1.clientX - touch2.clientX;
+        const dy = touch1.clientY - touch2.clientY;
+        return Math.sqrt(dx * dx + dy * dy);
+    }
+
+    handleTouchStart(e) {
+        if (e.touches.length > 0 && e.target.closest('.annotation-marker')) return;
+        
+        // Line drawing support
+        if (this.isDrawingLine && e.touches.length === 1) {
+            e.preventDefault();
+            this.lineStartPoint = this.getNormalisedCursorPoint(e.touches[0]);
+            if (!this.lineStartPoint) return;
+
+            const pLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+            pLine.id = 'line-preview';
+            pLine.setAttribute('stroke', this.lineColor);
+            pLine.setAttribute('stroke-dasharray', '4');
+            pLine.setAttribute('stroke-width', `calc(2 * var(--marker-scale, 1))`);
+            this.linesLayer.appendChild(pLine);
+            return;
+        }
+
+        [this.mapImage, this.annotationsLayer, this.linesLayer].forEach(el => el.style.transition = 'none');
+
+        if (e.touches.length === 2) {
+            // Cancel line drawing if it was started by the first finger
+            if (this.lineStartPoint) {
+                const preview = this.linesLayer.querySelector('#line-preview');
+                if (preview) preview.remove();
+                this.lineStartPoint = null;
+            }
+
+            this.isPanning = false;
+            this.isGesturing = true; // Mark as a gesture
+            this.lastTouchDistance = this.getTouchDistance(e.touches[0], e.touches[1]);
+            
+            // Calculate initial state for world-point tracking
+            const rect = this.mapWrapper.getBoundingClientRect();
+            const mX = ((e.touches[0].clientX + e.touches[1].clientX) / 2) - rect.left;
+            const mY = ((e.touches[0].clientY + e.touches[1].clientY) / 2) - rect.top;
+            
+            this.pinchStartMidpoint = {
+                x: (mX - this.panPosition.x) / this.scale,
+                y: (mY - this.panPosition.y) / this.scale
+            };
+            this.pinchStartScale = this.scale;
+            this.pinchStartDist = this.lastTouchDistance;
+
+        } else if (e.touches.length === 1) {
+            e.preventDefault(); 
+            this.isPanning = true;
+            this.lastPanPoint = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+            
+            this.touchStartTime = Date.now();
+            this.touchStartPoint = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+            this.touchHasMoved = false;
+            // Don't reset isGesturing here, rely on end event or 2-finger start
+        }
+    }
+
+    handleTouchMove(e) {
+        e.preventDefault();
+        
+        // Line drawing support
+        if (this.lineStartPoint && e.touches.length === 1) {
+            const eP = this.getNormalisedCursorPoint(e.touches[0]);
+            if (!eP) return;
+            const pL = this.linesLayer.querySelector('#line-preview');
+            if (pL) {
+                const w = this.mapImage.width, h = this.mapImage.height;
+                pL.setAttribute('x1', this.lineStartPoint.x * w);
+                pL.setAttribute('y1', this.lineStartPoint.y * h);
+                pL.setAttribute('x2', eP.x * w);
+                pL.setAttribute('y2', eP.y * h);
+            }
+            return;
+        }
+
+        if (e.touches.length === 2 && this.lastTouchDistance) {
+            this.isGesturing = true; // Ensure marked as gesture
+            const newDist = this.getTouchDistance(e.touches[0], e.touches[1]);
+            
+            const distRatio = newDist / this.pinchStartDist;
+            const newScale = Math.max(0.5, Math.min(5, this.pinchStartScale * distRatio));
+
+            if (newScale !== this.scale) {
+                this.scale = newScale;
+                
+                const rect = this.mapWrapper.getBoundingClientRect();
+                const mX = ((e.touches[0].clientX + e.touches[1].clientX) / 2) - rect.left;
+                const mY = ((e.touches[0].clientY + e.touches[1].clientY) / 2) - rect.top;
+
+                this.panPosition.x = mX - (this.pinchStartMidpoint.x * this.scale);
+                this.panPosition.y = mY - (this.pinchStartMidpoint.y * this.scale);
+
+                this.updateMapTransform();
+            }
+            
+        } else if (e.touches.length === 1 && this.isPanning) {
+            if (this.touchStartPoint) {
+                const dx = e.touches[0].clientX - this.touchStartPoint.x;
+                const dy = e.touches[0].clientY - this.touchStartPoint.y;
+                if (Math.sqrt(dx * dx + dy * dy) > 10) {
+                    this.touchHasMoved = true;
+                }
+            }
+
+            const dX = e.touches[0].clientX - this.lastPanPoint.x;
+            const dY = e.touches[0].clientY - this.lastPanPoint.y;
+            this.panPosition.x += dX;
+            this.panPosition.y += dY;
+            this.lastPanPoint = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+            this.updateMapTransform();
+        }
+    }
+
+    handleTouchEnd(e) {
+        // Line drawing support
+        if (this.lineStartPoint) {
+            const endPoint = this.getNormalisedCursorPoint(e.changedTouches[0]);
+            if (endPoint) {
+                if (!this.currentMap.lines) this.currentMap.lines = [];
+                this.currentMap.lines.push({ 
+                    id: Date.now().toString(), 
+                    start: this.lineStartPoint, 
+                    end: endPoint, 
+                    color: this.lineColor 
+                });
+                this.markCurrentMapDirty();
+                this.renderLines();
+            }
+            this.lineStartPoint = null;
+            const preview = this.linesLayer.querySelector('#line-preview');
+            if (preview) preview.remove();
+            return;
+        }
+
+        const touchDuration = Date.now() - this.touchStartTime;
+        // Only trigger tap if NO gesture occurred and NO significant movement happened
+        if (!this.isGesturing && !this.touchHasMoved && touchDuration < 300 && e.changedTouches.length === 1) {
+            if (!this.isDrawingLine && !e.target.closest('.annotation-marker') && !e.target.closest('g')) {
+                const point = this.getNormalisedCursorPoint(e.changedTouches[0]);
+                if (point) {
+                    this.showAnnotationModal(point);
+                }
+            }
+        }
+
+        [this.mapImage, this.annotationsLayer, this.linesLayer].forEach(el => el.style.transition = 'transform var(--transition-fast)');
+        this.isPanning = false;
+        this.lastTouchDistance = null;
+        
+        // Only reset gesture flag when ALL fingers are off
+        if (e.touches.length === 0) {
+            this.isGesturing = false;
+            this.touchHasMoved = false;
+        }
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
