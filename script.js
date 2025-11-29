@@ -106,6 +106,11 @@ class WarThunderMaps {
         this.editAnnotationBtn.addEventListener('click', () => this.showEditAnnotationModal());
         this.closePreviewModal.addEventListener('click', () => this.hideImagePreviewModal());
         this.imagePreviewModal.addEventListener('click', (e) => { if (e.target === this.imagePreviewModal) this.hideImagePreviewModal(); });
+        this.annotationDetailImage.addEventListener('click', () => {
+            if (this.annotationDetailImage.style.display !== 'none' && this.annotationDetailImage.src) {
+                this.showImagePreviewModal(this.annotationDetailImage.src);
+            }
+        });
 
         // Map controls
         this.exportMapBtn.addEventListener('click', () => this.exportCurrentMapAsZip());
