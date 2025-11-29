@@ -1,0 +1,231 @@
+{
+  "id": "1764198418407-9iol4tctl",
+  "name": "Advance to the Rhine",
+  "lines": [
+    {
+      "id": "1764199115689",
+      "start": {
+        "x": 0.4058070184345071,
+        "y": 0.2942181166625249,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.4091280647804153,
+        "y": 0.3413769747744222,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    },
+    {
+      "id": "1764199188920",
+      "start": {
+        "x": 0.11824414479429887,
+        "y": 0.48645733497045385,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.15887530181073872,
+        "y": 0.441807711875465,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    },
+    {
+      "id": "1764199194102",
+      "start": {
+        "x": 0.1209231221799982,
+        "y": 0.49360127466565207,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.17227018873923536,
+        "y": 0.49270828220375223,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    },
+    {
+      "id": "1764199198705",
+      "start": {
+        "x": 0.14994537719174095,
+        "y": 0.5945094228603268,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.17673515104873422,
+        "y": 0.6306756175672676,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    },
+    {
+      "id": "1764199204885",
+      "start": {
+        "x": 0.2383516309198188,
+        "y": 0.6079043097888234,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.23790513468886895,
+        "y": 0.5690591376961831,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    },
+    {
+      "id": "1764199210182",
+      "start": {
+        "x": 0.4459723783115168,
+        "y": 0.5471808223796387,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.4196291006854734,
+        "y": 0.5257490032940441,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    },
+    {
+      "id": "1764199213926",
+      "start": {
+        "x": 0.46606470870426175,
+        "y": 0.5668266565414337,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.4794595956327584,
+        "y": 0.5668266565414337,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    },
+    {
+      "id": "1764199219688",
+      "start": {
+        "x": 0.5665263606679867,
+        "y": 0.5833470170865795,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.6026925553749275,
+        "y": 0.5837935133175295,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    },
+    {
+      "id": "1764199272066",
+      "start": {
+        "x": 0.5708297271403526,
+        "y": 0.8741375361962066,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.6042613260303553,
+        "y": 0.8534627316194943,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "1764198471302",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "Shoot through Building (SL8) - Uncommon You are able to shoot through the doors and windows of the brick building. This is useful against somebody sitting on the a cap. They might try to shoot you so try to get your shot off quick",
+      "position": {
+        "x": 0.5592471272931292,
+        "y": 0.5836163862257397,
+        "type": "normalized"
+      },
+      "image": "1764198418407-9iol4tctl_advancetotherhine/annotation_1764198471302.jpg"
+    },
+    {
+      "id": "1764198499595",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "Rubble Peek Through Building (SL7) - Never seen This peek requires you to drive up this rubble pile quickly and reach the top. Starting from the monument side is almost necessary. This allows you to peek onto the a cap and parts of the park. However, you are exposed behind you.",
+      "position": {
+        "x": 0.45873239441305574,
+        "y": 0.5663552265049497,
+        "type": "normalized"
+      },
+      "image": "1764198418407-9iol4tctl_advancetotherhine/annotation_1764198499595.jpg"
+    },
+    {
+      "id": "1764198532289",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "Rubble peek addition (SL7.1) - Never seen This is an addition to the other peek on this pile. You can back up a bit towards the monument and peek into almost every way to get out of the top side spawn. This is a risky peek but can pay off if you are quick and hit your shots.",
+      "position": {
+        "x": 0.45223375738914257,
+        "y": 0.5523041194262184,
+        "type": "normalized"
+      },
+      "image": "1764198418407-9iol4tctl_advancetotherhine/annotation_1764198532289.jpg"
+    },
+    {
+      "id": "1764198591391",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "Rubble Pile Peek (SL4) - Not Common You can climb the rubble pile out of the bottom side spawn and peek over the entirety of the park and other parts of the map. You can use most tanks to get up, although you may need to climb side to side.",
+      "position": {
+        "x": 0.5634004695392634,
+        "y": 0.8787156122519858,
+        "type": "normalized"
+      },
+      "image": "1764198418407-9iol4tctl_advancetotherhine/annotation_1764198591391.jpg"
+    },
+    {
+      "id": "1764198621008",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "Rubble Peek to monument (SL9) - Never Seen You can climb the rubble pile to get a view through the window onto the east side of the monument. This is a special use case when somebody is camping or when you would like to camp.",
+      "position": {
+        "x": 0.404653864592252,
+        "y": 0.2868991886550983,
+        "type": "normalized"
+      },
+      "image": "1764198418407-9iol4tctl_advancetotherhine/annotation_1764198621008.jpg"
+    },
+    {
+      "id": "1764198649422",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "Rubble Peek (SL6) - Uncommon, yet easy to see This spot relies on you being able to kill the enemy before they realize you are up there. You need a runup and this spot is reliable for about 1:30 before the enemy you first killed pushed back and peeks you.",
+      "position": {
+        "x": 0.23852526623367432,
+        "y": 0.6173688365406111,
+        "type": "normalized"
+      },
+      "image": "1764198418407-9iol4tctl_advancetotherhine/annotation_1764198649422.jpg"
+    },
+    {
+      "id": "1764198671939",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "Out of map flank (SL5.2) - Somewhat common This is where you re-enter the map boundaries. You will need to be quick about this. The enemies might hear you or see you, and you may get stuck on the pile. If pulled off successfully, you get 2-3 free kills unless the enemy is very blind.",
+      "position": {
+        "x": 0.14524661321963078,
+        "y": 0.5892305700910035,
+        "type": "normalized"
+      },
+      "image": "1764198418407-9iol4tctl_advancetotherhine/annotation_1764198671939.jpg"
+    },
+    {
+      "id": "1764198692066",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "Out of map flank (SL5.1) - Somewhat common From the top spawn, you can rush across and climb this rubble pile to exit the map boundaries. Then follow straight and slight left into the pin below this.",
+      "position": {
+        "x": 0.1124024797947902,
+        "y": 0.49340298080440986,
+        "type": "normalized"
+      },
+      "image": "1764198418407-9iol4tctl_advancetotherhine/annotation_1764198692066.jpg"
+    }
+  ],
+  "image": "1764198418407-9iol4tctl_advancetotherhine/map.jpg"
+}

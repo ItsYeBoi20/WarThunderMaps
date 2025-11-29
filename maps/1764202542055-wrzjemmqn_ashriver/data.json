@@ -1,0 +1,87 @@
+{
+  "id": "1764202542055-wrzjemmqn",
+  "name": "Ash River",
+  "lines": [
+    {
+      "id": "1764202622831",
+      "start": {
+        "x": 0.21401308093138482,
+        "y": 0.21079797505341322,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.2968425196621058,
+        "y": 0.25067881592376035,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    },
+    {
+      "id": "1764202673737",
+      "start": {
+        "x": 0.23018670867948973,
+        "y": 0.6397948125339434,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.2546225185116725,
+        "y": 0.5899258128764276,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    },
+    {
+      "id": "1764202730483",
+      "start": {
+        "x": 0.8025726604588984,
+        "y": 0.3517461036992867,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.7618128164802452,
+        "y": 0.3645335057318053,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "1764202612850",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "Spawn Hill Climb (SL10) - Somewhat common | This peek lets you see almost the entire bottom parts of the map, and even up into some of the top. This hill has almost no cover yet you have concealment. This spot works in a more heavily armored tank for longer times, or lightly armored vehicles for a few quick shots. I recommend playing on the backside of the hill so you stay hidden and its less likely the enemy will see your muzzle flash.",
+      "position": {
+        "x": 0.20634368845631806,
+        "y": 0.2077302180633865,
+        "type": "normalized"
+      },
+      "image": "1764202542055-wrzjemmqn_ashriver/annotation_1764202612850.jpg"
+    },
+    {
+      "id": "1764202658495",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "Common. Sniper Hill. Overlooks approaches to B and C points.",
+      "position": {
+        "x": 0.22669587870346364,
+        "y": 0.6487712324722963,
+        "type": "normalized"
+      },
+      "image": "1764202542055-wrzjemmqn_ashriver/annotation_1764202658495.jpg"
+    },
+    {
+      "id": "1764202714069",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "A position for shooting at the balcony. The range is 700 meters. If you move forward a bit, there will be a couple of rocks beyond which the range will be 600 meters. It's worth taking this position early in the fight, as sooner or later someone will move onto the balcony.",
+      "position": {
+        "x": 0.8079007446391145,
+        "y": 0.3512132952812651,
+        "type": "normalized"
+      },
+      "image": "1764202542055-wrzjemmqn_ashriver/annotation_1764202714069.jpg"
+    }
+  ],
+  "image": "1764202542055-wrzjemmqn_ashriver/map.jpg"
+}

@@ -1,0 +1,123 @@
+{
+  "id": "1764203249240-em40j0lbj",
+  "name": "Berlin",
+  "lines": [
+    {
+      "id": "1764203430245",
+      "start": {
+        "x": 0.5022770031474234,
+        "y": 0.5236350735193439,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.5461029525377743,
+        "y": 0.5628999512536854,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    },
+    {
+      "id": "1764203485688",
+      "start": {
+        "x": 0.7453824518055517,
+        "y": 0.6517314948982439,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.7471439829127104,
+        "y": 0.568499150084996,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    },
+    {
+      "id": "1764203545888",
+      "start": {
+        "x": 0.8783530623259994,
+        "y": 0.4605048932502682,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.8318061538936149,
+        "y": 0.5094086071729,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "1764203352707",
+      "label": "C",
+      "type": "target",
+      "notes": "",
+      "position": {
+        "x": 0.5217080925232711,
+        "y": 0.4548182875145919,
+        "type": "normalized"
+      },
+      "image": null
+    },
+    {
+      "id": "1764203362960",
+      "label": "B",
+      "type": "target",
+      "notes": "",
+      "position": {
+        "x": 0.6774084490473175,
+        "y": 0.44561862796157714,
+        "type": "normalized"
+      },
+      "image": null
+    },
+    {
+      "id": "1764203370480",
+      "label": "A",
+      "type": "target",
+      "notes": "",
+      "position": {
+        "x": 0.7877788782269413,
+        "y": 0.45759748696809543,
+        "type": "normalized"
+      },
+      "image": null
+    },
+    {
+      "id": "1764203421816",
+      "label": "Camp",
+      "type": "camping",
+      "notes": "Rat Spot - A successful flank for the North team along the west edge of the map gives access to South team's spawn.",
+      "position": {
+        "x": 0.49890577627124255,
+        "y": 0.5218503063496011,
+        "type": "normalized"
+      },
+      "image": "1764203249240-em40j0lbj_berlin/annotation_1764203421816.png"
+    },
+    {
+      "id": "1764203473209",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "Sniping Spot - Offers good coverage of the B and C point. Be careful of flankers to the right of the Reichstag.",
+      "position": {
+        "x": 0.7457691034797453,
+        "y": 0.6613055617919676,
+        "type": "normalized"
+      },
+      "image": "1764203249240-em40j0lbj_berlin/annotation_1764203473209.png"
+    },
+    {
+      "id": "1764203535944",
+      "label": "Camp",
+      "type": "camping",
+      "notes": "Rat Spot - Usually rushed by the North team. This spot can see the South team's spawn.",
+      "position": {
+        "x": 0.8839148286822966,
+        "y": 0.4536719249326688,
+        "type": "normalized"
+      },
+      "image": "1764203249240-em40j0lbj_berlin/annotation_1764203535944.png"
+    }
+  ],
+  "image": "1764203249240-em40j0lbj_berlin/map.png"
+}

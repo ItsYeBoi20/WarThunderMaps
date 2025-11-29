@@ -1,0 +1,35 @@
+{
+  "id": "1764201204386-yk40s1mtg",
+  "name": "Aral Sea",
+  "lines": [
+    {
+      "id": "1764201871146",
+      "start": {
+        "x": 0.0726425079047207,
+        "y": 0.3222899195841296,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.0726425079047207,
+        "y": 0.37221602365330764,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "1764201860645",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "This position is excellent for peeking out and defending point A. Just make sure to remove the small tree in front of you so it doesn’t block your line of sight.",
+      "position": {
+        "x": 0.07157149486437207,
+        "y": 0.31729730917721183,
+        "type": "normalized"
+      },
+      "image": "1764201204386-yk40s1mtg_aralsea/annotation_1764201860645.png"
+    }
+  ],
+  "image": "1764201204386-yk40s1mtg_aralsea/map.jpg"
+}

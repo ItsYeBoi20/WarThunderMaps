@@ -1,0 +1,44 @@
+{
+  "id": "1764196569467-46n3n8hfw",
+  "name": "Abandoned Town",
+  "lines": [],
+  "annotations": [
+    {
+      "id": "1764196652687",
+      "label": "Camp",
+      "type": "camping",
+      "notes": "Rat Spot - Not Very Common You can side climb between rocks and get into a hidden spot nobody ever checks.",
+      "position": {
+        "x": 0.6743747980643597,
+        "y": 0.2498077733814892,
+        "type": "normalized"
+      },
+      "image": "1764196569467-46n3n8hfw_abandonedtown/annotation_1764196652687.jpg"
+    },
+    {
+      "id": "1764196697038",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "Common Spot You are able to peek over the bridge mid map and watch the enemies pushing to the A point.",
+      "position": {
+        "x": 0.710871937778687,
+        "y": 0.5252053597517706,
+        "type": "normalized"
+      },
+      "image": "1764196569467-46n3n8hfw_abandonedtown/annotation_1764196697038.jpg"
+    },
+    {
+      "id": "1764196744713",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "Counter to bottom side peek - Rare You can sit behind the coal piles, and look right through 2 pillars to get a good shot on anybody camping in the other sides spawn peek",
+      "position": {
+        "x": 0.47582960960944926,
+        "y": 0.41627730876480423,
+        "type": "normalized"
+      },
+      "image": "1764196569467-46n3n8hfw_abandonedtown/annotation_1764196744713.jpg"
+    }
+  ],
+  "image": "1764196569467-46n3n8hfw_abandonedtown/map.png"
+}

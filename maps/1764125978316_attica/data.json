@@ -1,0 +1,63 @@
+{
+  "id": "1764125978316",
+  "name": "Attica",
+  "lines": [
+    {
+      "id": "1764130244791",
+      "start": {
+        "x": 0.3242886951120405,
+        "y": 0.18119293718051155,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.24854160893854163,
+        "y": 0.33963059242674665,
+        "type": "normalized"
+      },
+      "color": "#ff6b6b"
+    },
+    {
+      "id": "1764130271482",
+      "start": {
+        "x": 0.2434918031936417,
+        "y": 0.3661420725874712,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.2573787689921165,
+        "y": 0.4728192189484821,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    },
+    {
+      "id": "1764130278647",
+      "start": {
+        "x": 0.24917283465665416,
+        "y": 0.36424839543313375,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.3299697265750529,
+        "y": 0.5005931505454316,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "1764126054282",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "Snipe down onto 'A' and surrounding area",
+      "position": {
+        "x": 0.24143667877075153,
+        "y": 0.35511570842131923,
+        "type": "normalized"
+      },
+      "image": null
+    }
+  ],
+  "image": "1764125978316_attica/map.jpg"
+}

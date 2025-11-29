@@ -1,0 +1,61 @@
+{
+  "id": "1764200812585-wtf6u8ht0",
+  "name": "American Desert",
+  "lines": [
+    {
+      "id": "1764200954784",
+      "start": {
+        "x": 0.466994741899535,
+        "y": 0.6429352351342029,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.43211737588157945,
+        "y": 0.6326193944810048,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    },
+    {
+      "id": "1764200968483",
+      "start": {
+        "x": 0.371204792976981,
+        "y": 0.4960573134529535,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.34959065065599443,
+        "y": 0.5505838997627149,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "1764200882893",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "great spot to hold the people going to the point A",
+      "position": {
+        "x": 0.37252653066527674,
+        "y": 0.48874589220285297,
+        "type": "normalized"
+      },
+      "image": "1764200812585-wtf6u8ht0_americandesert/annotation_1764200882893.png"
+    },
+    {
+      "id": "1764200938730",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "get to this road and hide on the side of it, you will lock down the only road for the enemies to get to point A",
+      "position": {
+        "x": 0.4748544300162573,
+        "y": 0.6458826181779738,
+        "type": "normalized"
+      },
+      "image": "1764200812585-wtf6u8ht0_americandesert/annotation_1764200938730.png"
+    }
+  ],
+  "image": "1764200812585-wtf6u8ht0_americandesert/map.jpg"
+}

@@ -1,0 +1,87 @@
+{
+  "id": "1764198157575-us59aqvwi",
+  "name": "Abandoned Town",
+  "lines": [
+    {
+      "id": "1764199062300",
+      "start": {
+        "x": 0.48314088600193605,
+        "y": 0.41711509840529976,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.5335543695328234,
+        "y": 0.4423218401707434,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    },
+    {
+      "id": "1764199083296",
+      "start": {
+        "x": 0.7059830958123802,
+        "y": 0.5215952164475736,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.6661637501249401,
+        "y": 0.4923700086035808,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    },
+    {
+      "id": "1764199095438",
+      "start": {
+        "x": 0.6731047369878884,
+        "y": 0.24468637212574293,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.6942930126747832,
+        "y": 0.2541845646750405,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "1764198193297",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "Counter to bottom side peek - Rare You can sit behind the coal piles, and look right through 2 pillars to get a good shot on anybody camping in the other sides spawn peek",
+      "position": {
+        "x": 0.4777812476151815,
+        "y": 0.4157400082521354,
+        "type": "normalized"
+      },
+      "image": "1764198157575-us59aqvwi_abandonedtown/annotation_1764198193297.jpg"
+    },
+    {
+      "id": "1764198259948",
+      "label": "Camp",
+      "type": "camping",
+      "notes": "Rat Spot - Not Very Common You can side climb between rocks and get into a hidden spot nobody ever checks.",
+      "position": {
+        "x": 0.6675322589503572,
+        "y": 0.2428722794797882,
+        "type": "normalized"
+      },
+      "image": "1764198157575-us59aqvwi_abandonedtown/annotation_1764198259948.jpg"
+    },
+    {
+      "id": "1764198289216",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "Common Spot You are able to peek over the bridge mid map and watch the enemies pushing to the A point.",
+      "position": {
+        "x": 0.7118393745290836,
+        "y": 0.5256791004833025,
+        "type": "normalized"
+      },
+      "image": "1764198157575-us59aqvwi_abandonedtown/annotation_1764198289216.jpg"
+    }
+  ],
+  "image": "1764198157575-us59aqvwi_abandonedtown/map.png"
+}

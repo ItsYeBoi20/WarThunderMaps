@@ -1,0 +1,71 @@
+{
+  "id": "1764203670983-8n3blytzx",
+  "name": "Breslau",
+  "lines": [
+    {
+      "id": "1764203719337",
+      "start": {
+        "x": 0.612700161078109,
+        "y": 0.6135647754227881,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.566967976269965,
+        "y": 0.5750369758926394,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "1764203704869",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "Hide behind the building and wait for the enemies to push up",
+      "position": {
+        "x": 0.6148928000757599,
+        "y": 0.6152875632066566,
+        "type": "normalized"
+      },
+      "image": "1764203670983-8n3blytzx_breslau/annotation_1764203704869.png"
+    },
+    {
+      "id": "1764203787268",
+      "label": "B",
+      "type": "target",
+      "notes": "",
+      "position": {
+        "x": 0.6412903965377976,
+        "y": 0.4332978141760411,
+        "type": "normalized"
+      },
+      "image": null
+    },
+    {
+      "id": "1764203796871",
+      "label": "A",
+      "type": "target",
+      "notes": "",
+      "position": {
+        "x": 0.7084333082210039,
+        "y": 0.3634003215007031,
+        "type": "normalized"
+      },
+      "image": null
+    },
+    {
+      "id": "1764203808021",
+      "label": "C",
+      "type": "target",
+      "notes": "",
+      "position": {
+        "x": 0.5348947057167167,
+        "y": 0.5496788610935989,
+        "type": "normalized"
+      },
+      "image": null
+    }
+  ],
+  "image": "1764203670983-8n3blytzx_breslau/map.png"
+}

@@ -1,0 +1,61 @@
+{
+  "id": "1764130574020",
+  "name": "38th Parallel",
+  "lines": [
+    {
+      "id": "1764199004995",
+      "start": {
+        "x": 0.6911160434512088,
+        "y": 0.16880503720551365,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.7216029400493363,
+        "y": 0.2565217221545125,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    },
+    {
+      "id": "1764199020891",
+      "start": {
+        "x": 0.7622521355135066,
+        "y": 0.8571670709211329,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.7724144343795492,
+        "y": 0.7764035378278473,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "1764130736356",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "Spawn on the right side then instantly climb up this small hill, then u have a peak into the middle of the map, be quick with your shots, because most of the players are very fast on that road",
+      "position": {
+        "x": 0.7609488537035558,
+        "y": 0.866495043890191,
+        "type": "normalized"
+      },
+      "image": "1764130574020_38th-parallel/annotation_1764130736356.png"
+    },
+    {
+      "id": "1764130887846",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "156 degrees, shooting at people rushing to their position",
+      "position": {
+        "x": 0.688682805247245,
+        "y": 0.16326339419097033,
+        "type": "normalized"
+      },
+      "image": "1764130574020_38th-parallel/annotation_1764130887846.png"
+    }
+  ],
+  "image": "1764130574020_38th-parallel/map.jpg"
+}

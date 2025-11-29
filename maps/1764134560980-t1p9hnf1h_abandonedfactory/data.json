@@ -1,0 +1,35 @@
+{
+  "id": "1764134560980-t1p9hnf1h",
+  "name": "Abandoned Factory",
+  "lines": [
+    {
+      "id": "1764199031208",
+      "start": {
+        "x": 0.5054815974941269,
+        "y": 0.25606891151135475,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.4851213782302271,
+        "y": 0.4025058731401723,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "1764134618648",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "You have control over 'A' point and anyone coming out of their spawn",
+      "position": {
+        "x": 0.5074409975983576,
+        "y": 0.24475210769194766,
+        "type": "normalized"
+      },
+      "image": "1764134560980-t1p9hnf1h_abandoned-factory/annotation_1764134618648.png"
+    }
+  ],
+  "image": "1764134560980-t1p9hnf1h_abandoned-factory/map.jpg"
+}

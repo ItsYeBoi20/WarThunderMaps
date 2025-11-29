@@ -1,0 +1,35 @@
+{
+  "id": "1764203944526-pdgl4hgjc",
+  "name": "Cargo Port",
+  "lines": [
+    {
+      "id": "1764203994377",
+      "start": {
+        "x": 0.512583377590388,
+        "y": 0.44290307907312615,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.5153771366596926,
+        "y": 0.3915677561746532,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "1764203978407",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "Position yourself behind this bridge and you can spawn camp the enemy and hold b",
+      "position": {
+        "x": 0.5117488398500007,
+        "y": 0.44833002590922716,
+        "type": "normalized"
+      },
+      "image": "1764203944526-pdgl4hgjc_cargoport/annotation_1764203978407.png"
+    }
+  ],
+  "image": "1764203944526-pdgl4hgjc_cargoport/map.png"
+}

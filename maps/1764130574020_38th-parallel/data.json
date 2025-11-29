@@ -1,0 +1,61 @@
+{
+  "id": "1764130574020",
+  "name": "38th Parallel",
+  "image": "1764130574020_38th-parallel/map.jpg",
+  "annotations": [
+    {
+      "id": "1764130736356",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "Spawn on the right side then instantly climb up this small hill, then u have a peak into the middle of the map, be quick with your shots, because most of the players are very fast on that road",
+      "position": {
+        "x": 0.7609488537035558,
+        "y": 0.866495043890191,
+        "type": "normalized"
+      },
+      "image": "1764130574020_38th-parallel/annotation_1764130736356.png"
+    },
+    {
+      "id": "1764130887846",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "156 degrees, shooting at people rushing to their position",
+      "position": {
+        "x": 0.688682805247245,
+        "y": 0.16326339419097033,
+        "type": "normalized"
+      },
+      "image": "1764130574020_38th-parallel/annotation_1764130887846.png"
+    }
+  ],
+  "lines": [
+    {
+      "id": "1764130816282",
+      "start": {
+        "x": 0.7618947077336542,
+        "y": 0.858884454932634,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.7690762125776124,
+        "y": 0.8098108384989197,
+        "type": "normalized"
+      },
+      "color": "#ff6b6b"
+    },
+    {
+      "id": "1764130935599",
+      "start": {
+        "x": 0.6897887704133203,
+        "y": 0.1662498182265644,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.7096197160822454,
+        "y": 0.2248130796551087,
+        "type": "normalized"
+      },
+      "color": "#ff6b6b"
+    }
+  ]
+}

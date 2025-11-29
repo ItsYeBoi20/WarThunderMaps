@@ -1,0 +1,75 @@
+{
+  "id": "1764202909562-529323km8",
+  "name": "Attica",
+  "lines": [
+    {
+      "id": "1764202932856",
+      "start": {
+        "x": 0.24667438288397445,
+        "y": 0.36519742945040423,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.24868361592324895,
+        "y": 0.45239814335491735,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    },
+    {
+      "id": "1764202935607",
+      "start": {
+        "x": 0.25109469557037833,
+        "y": 0.3631881964111297,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.3153901528271622,
+        "y": 0.48133109912047006,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    },
+    {
+      "id": "1764202978522",
+      "start": {
+        "x": 0.5119056814794352,
+        "y": 0.7387565568939772,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.515767101263321,
+        "y": 0.6769738403518023,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "1764202928779",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "Snipe onto point 'A' and surrounding area",
+      "position": {
+        "x": 0.24667438288397445,
+        "y": 0.357964190509016,
+        "type": "normalized"
+      },
+      "image": null
+    },
+    {
+      "id": "1764202960090",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "Sit here and snipe people going to the B point",
+      "position": {
+        "x": 0.5107519536132343,
+        "y": 0.7451848441370282,
+        "type": "normalized"
+      },
+      "image": "1764202909562-529323km8_attica/annotation_1764202960090.png"
+    }
+  ],
+  "image": "1764202909562-529323km8_attica/map.png"
+}

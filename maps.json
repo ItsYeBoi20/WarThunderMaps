@@ -1,0 +1,98 @@
+[
+  {
+    "id": "1764130574020",
+    "name": "38th Parallel",
+    "path": "1764130574020_38thparallel",
+    "image": "1764130574020_38th-parallel/map.jpg"
+  },
+  {
+    "id": "1764134560980-t1p9hnf1h",
+    "name": "Abandoned Factory",
+    "path": "1764134560980-t1p9hnf1h_abandonedfactory",
+    "image": "1764134560980-t1p9hnf1h_abandoned-factory/map.jpg"
+  },
+  {
+    "id": "1764198157575-us59aqvwi",
+    "name": "Abandoned Town",
+    "path": "1764198157575-us59aqvwi_abandonedtown",
+    "image": "1764198157575-us59aqvwi_abandonedtown/map.png"
+  },
+  {
+    "id": "1764198418407-9iol4tctl",
+    "name": "Advance to the Rhine",
+    "path": "1764198418407-9iol4tctl_advancetotherhine",
+    "image": "1764198418407-9iol4tctl_advancetotherhine/map.jpg"
+  },
+  {
+    "id": "1764200799439-8hfyw1sxa",
+    "name": "Alaska",
+    "path": "1764200799439-8hfyw1sxa_alaska",
+    "image": "1764200799439-8hfyw1sxa_alaska/map.jpg"
+  },
+  {
+    "id": "1764200812585-wtf6u8ht0",
+    "name": "American Desert",
+    "path": "1764200812585-wtf6u8ht0_americandesert",
+    "image": "1764200812585-wtf6u8ht0_americandesert/map.jpg"
+  },
+  {
+    "id": "1764201204386-yk40s1mtg",
+    "name": "Aral Sea",
+    "path": "1764201204386-yk40s1mtg_aralsea",
+    "image": "1764201204386-yk40s1mtg_aralsea/map.jpg"
+  },
+  {
+    "id": "1764202084091-yb4z81yl0",
+    "name": "Arctic",
+    "path": "1764202084091-yb4z81yl0_arctic",
+    "image": "1764202084091-yb4z81yl0_arctic/map.png"
+  },
+  {
+    "id": "1764202393999-jkk62hfge",
+    "name": "Ardennes",
+    "path": "1764202393999-jkk62hfge_ardennes",
+    "image": "1764202393999-jkk62hfge_ardennes/map.png"
+  },
+  {
+    "id": "1764202542055-wrzjemmqn",
+    "name": "Ash River",
+    "path": "1764202542055-wrzjemmqn_ashriver",
+    "image": "1764202542055-wrzjemmqn_ashriver/map.jpg"
+  },
+  {
+    "id": "1764202909562-529323km8",
+    "name": "Attica",
+    "path": "1764202909562-529323km8_attica",
+    "image": "1764202909562-529323km8_attica/map.png"
+  },
+  {
+    "id": "1764203075710-80x5wxuvk",
+    "name": "Hurtgen Forest",
+    "path": "1764203075710-80x5wxuvk_hurtgenforest",
+    "image": "1764203075710-80x5wxuvk_hurtgenforest/map.png"
+  },
+  {
+    "id": "1764203249240-em40j0lbj",
+    "name": "Berlin",
+    "path": "1764203249240-em40j0lbj_berlin",
+    "image": "1764203249240-em40j0lbj_berlin/map.png"
+  },
+  {
+    "id": "1764203670983-8n3blytzx",
+    "name": "Breslau",
+    "path": "1764203670983-8n3blytzx_breslau",
+    "image": "1764203670983-8n3blytzx_breslau/map.png"
+  },
+  {
+    "id": "1764203878281-zr3t4lj39",
+    "name": "Campania",
+    "path": "1764203878281-zr3t4lj39_campania",
+    "image": "1764203878281-zr3t4lj39_campania/map.jpg"
+  },
+  {
+    "id": "1764203944526-pdgl4hgjc",
+    "name": "Cargo Port",
+    "path": "1764203944526-pdgl4hgjc_cargoport",
+    "image": "1764203944526-pdgl4hgjc_cargoport/map.png"
+  }
+]

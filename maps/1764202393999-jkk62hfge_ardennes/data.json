@@ -1,0 +1,35 @@
+{
+  "id": "1764202393999-jkk62hfge",
+  "name": "Ardennes",
+  "lines": [
+    {
+      "id": "1764202465396",
+      "start": {
+        "x": 0.13925490423848158,
+        "y": 0.42884407555009035,
+        "type": "normalized"
+      },
+      "end": {
+        "x": 0.1791074603893807,
+        "y": 0.45508034168276557,
+        "type": "normalized"
+      },
+      "color": "#4ecdc4"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "1764202448836",
+      "label": "Snipe",
+      "type": "camping",
+      "notes": "I've cleared some trees to show you what you can hold, but you don't have to take them out just hide between the trees and take out the enemy",
+      "position": {
+        "x": 0.1352696486233917,
+        "y": 0.42685144774254535,
+        "type": "normalized"
+      },
+      "image": "1764202393999-jkk62hfge_ardennes/annotation_1764202448836.png"
+    }
+  ],
+  "image": "1764202393999-jkk62hfge_ardennes/map.png"
+}

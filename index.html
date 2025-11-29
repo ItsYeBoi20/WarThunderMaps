@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War Thunder Maps</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>War Thunder Maps</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search maps..." autocomplete="off">
+                <button id="clearSearch" class="clear-btn">&times;</button>
+            </div>
+            <div class="controls">
+                <button id="addMapBtn" class="btn primary">Add New Map</button>
+                <button id="exportAllBtn" class="btn secondary">Export All</button>
+                <button id="importBtn" class="btn secondary">Import</button>
+                <input type="file" id="importFile" accept=".json" style="display: none;">
+                <!-- Hidden file input for changing map image -->
+                <input type="file" id="changeMapImageFile" accept="image/*" style="display: none;">
+            </div>
+        </header>
+
+        <div class="maps-grid" id="mapsGrid">
+            <!-- Maps will be dynamically loaded here -->
+        </div>
+    </div>
+
+    <!-- Map Modal -->
+    <div id="mapModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Map Details</h2>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="map-container" id="mapContainer">
+                    <div class="map-wrapper" id="mapWrapper">
+                        <img id="mapImage" class="map-image" alt="War Thunder Map">
+                        <div id="annotationsLayer" class="annotations-layer"></div>
+                        <svg id="linesLayer" class="lines-layer"></svg>
+                    </div>
+                </div>
+                <div class="map-controls">
+                    <button id="exportMapBtn" class="btn secondary">Export Map</button>
+                    <button id="drawLineBtn" class="btn secondary">Draw Line</button>
+                    <div class="color-picker-container">
+                        <div id="colorPicker" class="color-picker"></div>
+                        <div id="colorOptions" class="color-options">
+                            <div class="color-option" style="background-color: #ff6b6b;" data-color="#ff6b6b"></div>
+                            <div class="color-option" style="background-color: #4ecdc4;" data-color="#4ecdc4"></div>
+                            <div class="color-option" style="background-color: #45b7d1;" data-color="#45b7d1"></div>
+                            <div class="color-option" style="background-color: #f9ca24;" data-color="#f9ca24"></div>
+                            <div class="color-option" style="background-color: #6c5ce7;" data-color="#6c5ce7"></div>
+                        </div>
+                    </div>
+                    <button id="deleteMapBtn" class="btn danger">Delete Map</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add/Edit Map Modal -->
+    <div id="addMapModal" class="modal">
+        <div class="modal-content" style="max-width: 600px;">
+            <div class="modal-header">
+                <h2 id="addMapModalTitle">Add New Map</h2>
+                <button class="close-btn" id="closeAddModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="addMapForm">
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="mapName">Map Name:</label>
+                            <input type="text" id="mapName" required>
+                        </div>
+                        <div class="form-col">
+                            <label for="mapImageFile">Map Image:</label>
+                            <input type="file" id="mapImageFile" accept="image/*" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn primary" style="width: 100%;">Add Map</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add/Edit Annotation Modal -->
+    <div id="annotationModal" class="modal">
+        <div class="modal-content" style="max-width: 600px;">
+            <div class="modal-header">
+                <h2 id="annotationModalTitle">Add Annotation</h2>
+                <button class="close-btn" id="closeAnnotationModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="annotationForm">
+                    <div class="form-group">
+                        <label for="annotationLabel">Label:</label>
+                        <input type="text" id="annotationLabel" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="annotationType">Type:</label>
+                            <select id="annotationType">
+                                <option value="camping">Camping Spot</option>
+                                <option value="path">Drive Path</option>
+                                <option value="spawn">Spawn Point</option>
+                                <option value="target">Target</option>
+                                <option value="cover">Cover</option>
+                            </select>
+                        </div>
+                        <div class="form-col">
+                            <label for="annotationImageFile">Image (Optional):</label>
+                            <input type="file" id="annotationImageFile" accept="image/*">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="annotationNotes">Notes (Optional):</label>
+                        <textarea id="annotationNotes" rows="4"></textarea>
+                    </div>
+                    <button type="submit" id="annotationSubmitBtn" class="btn primary">Add Annotation</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Annotation Detail Modal -->
+    <div id="annotationDetailModal" class="modal">
+        <div class="modal-content" style="max-width: 800px;">
+            <div class="modal-header">
+                <h2 id="annotationDetailTitle"></h2>
+                <button class="close-btn" id="closeAnnotationDetailModal">&times;</button>
+            </div>
+            <div class="modal-body" id="annotationDetailBody">
+                <img id="annotationDetailImage" style="width: 100%; max-height: 500px; object-fit: contain; display: none;">
+                <div id="annotationDetailNotes"></div>
+            </div>
+            <div class="modal-footer">
+                <button id="editAnnotationBtn" class="btn secondary">Edit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Preview Modal -->
+    <div id="imagePreviewModal" class="modal">
+        <div class="modal-content" style="background: transparent; border: none; width: auto; height: auto; max-width: 90vw; max-h: 90vh;">
+            <img id="previewImage" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+        <button class="close-btn" id="closePreviewModal" style="position: absolute; top: 1.5rem; right: 1.5rem; background: rgba(0,0,0,0.25); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; z-index: 1010;">&times;</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
